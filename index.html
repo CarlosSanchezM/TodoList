@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>TODOList</title>
+</head>
+<body>
+    <main>
+      <aside class="Categories-container">
+        <section class="Options-container">
+          <ul class="Options-list">
+            <li>Inbox</li>
+            <li>Today</li>
+            <li>Upcoming</li>
+            <li>Anytime</li>
+            <li>Someday</li>
+            <li>Trash</li>
+          </ul>
+        </section>
+        <section class="Category-container">
+          <ul class="Category-list">
+            <li>Family</li>
+            <li>Vaccation Planning</li>
+            <li>Buy a new car</li>
+            <li>Festival Ideas</li>
+          </ul>
+          <ul class="Category-list-2">
+            <li>Work</li>
+            <li>Onboarding Plan</li>
+            <li>Invoice Review</li>
+            <li>Presentation Work</li>
+          </ul>
+        </section>
+        <div class="Add-button-container">
+          <button id="addButton">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
+            </span>
+          </button>
+        </div>
+      </aside>
+      <article class="Task-container">
+        <section>
+          <h1 class="Add-task"><input type="text" placeholder="Today Task" value=""></h1>
+          <nav>
+            <span><span>10</span><span class="Nav-options">all</span></span>
+            <span><span></span><span class="Nav-options">important</span></span>
+            <span><span>5</span><span class="Nav-options">notes</span></span>
+            <span><span></span><span class="Nav-options">links</span></span>
+          </nav>
+          <ul>
+            <label class="container">
+              <input checked="checked" type="checkbox">
+              <div class="checkmark"></div><span>Tarea</span><span>Approved</span>
+            </label>
+            <label class="container">
+              <input checked="checked" type="checkbox">
+              <div class="checkmark"></div><span>Tarea</span><span>Approved</span>
+            </label>
+          </ul>
+        </section>
+      </article>
+      <aside class="Meeting-container">
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+        <div>Card 4</div>
+      </aside>
+    </main>
+</body>
 </html>
