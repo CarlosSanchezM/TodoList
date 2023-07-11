@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 body{
@@ -59,38 +60,53 @@ button {
  button:hover {
   background-color: #0071e2;
  }
+ /*Task Styles*/
 
  .Task-container{
   padding-top: 20px;
-  padding-left: 45px;
-  padding-right: 45px;
+  /* padding-left: 45px; */
+  /* padding-right: 45px; */
  }
 
+form{
+  padding-left: 45px;
+  padding-right: 45px;
+  font-size: 40px;
+}
 nav{
   margin: 15px 0 15px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 }
-
+nav span{
+  flex-grow: 1;
+}
 .Nav-options{
-  padding-left: 10px;
+  padding-left: 5px;
+}
+.Nav-counter.With-number{
+  background-color: #e2dcf5;
+  color: #491af3;
+  font-size: 14px; 
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+.Nav-selected{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #491af3;
 }
 .container {
   display: flex;
   position: relative;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 25px;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* .Task-status{
-  font-size: 12px;
-  padding-left: 220px;
-  background-color:  rgb(189, 250, 189);
-  
-} */
 /* Hide the default checkbox */
 .container input {
   position: absolute;
@@ -171,24 +187,23 @@ nav{
     rotate: 0;
   }
 }
-
-.container{
+.Todo-item{
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 45px;
+  padding-right: 45px;
+  /* justify-content: space-between; */
 }
 .Task-name{
-  /*width: auto;*/
-  padding-left: 5px;
+  padding-left: 10px;
+  font-size: 16px;
 }
 .Task-status-container {
   font-size: 12px;
-  position: absolute;
-  left: 490px;
-  display: inline-block;
+  margin-left: auto;  
 }
-
 .Task-status {
+  margin-left: 10px;
   background-color: rgb(189, 250, 189);;
   border-radius: 8px;
   padding: 2px 8px;
