@@ -61,15 +61,11 @@ button {
  }
 
  .Task-container{
+  padding-top: 20px;
   padding-left: 45px;
   padding-right: 45px;
  }
 
- /* Checkbox Styles */
-/* Hide the default checkbox */
-.container input {
-  display: none;
-}
 nav{
   margin: 15px 0 15px 0;
   display: flex;
@@ -89,8 +85,116 @@ nav{
   -webkit-tap-highlight-color: transparent;
 }
 
+/* .Task-status{
+  font-size: 12px;
+  padding-left: 220px;
+  background-color:  rgb(189, 250, 189);
+  
+} */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  margin-bottom: 25px;
+}
+
 /* Create a custom checkbox */
 .checkmark {
+  --clr: #54409E;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--clr);
+  border-radius: .5rem;
+  animation: pulse 500ms ease-in-out;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #E0E0E2;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #ab9ddf;
+    rotate: 20deg;
+  }
+
+  50% {
+    rotate: -20deg;
+  }
+
+  75% {
+    box-shadow: 0 0 0 10px #937fdd;
+  }
+
+  100% {
+    box-shadow: 0 0 0 13px #876beb;
+    rotate: 0;
+  }
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Task-name{
+  /*width: auto;*/
+  padding-left: 5px;
+}
+.Task-status-container {
+  font-size: 12px;
+  position: absolute;
+  left: 490px;
+  display: inline-block;
+}
+
+.Task-status {
+  background-color: rgb(189, 250, 189);;
+  border-radius: 8px;
+  padding: 2px 8px;
+} 
+/* Create a custom checkbox */
+/* .checkmark {
   position: relative;
   top: 0;
   left: 0;
@@ -100,15 +204,15 @@ nav{
   border-radius: 0.25em;
   transition: all 0.25s;
   margin-bottom: .5em;
-}
+} */
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+/* .container input:checked ~ .checkmark {
   background-color: #2196F3;
-}
+} */
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+/* .checkmark:after {
   content: "";
   position: absolute;
   transform: rotate(0deg);
@@ -119,10 +223,10 @@ nav{
   height: 1.05em;
   border-radius: 0.25em;
   transition: all 0.25s, border-width 0.1s;
-}
+} */
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+/* .container input:checked ~ .checkmark:after {
   left: 0.45em;
   top: 0.25em;
   width: 0.25em;
@@ -131,15 +235,15 @@ nav{
   border-width: 0 0.15em 0.15em 0;
   border-radius: 0em;
   transform: rotate(45deg);
-}
+}*/
 
-.Meeting-container{
+ .Meeting-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin-top: 70px;
-}
+} 
 
 .Meeting-container>div{
   height: 80px;
