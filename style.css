@@ -22,7 +22,9 @@ li{
   padding-bottom: 5px;
 }
 
-
+.Category-icon svg{
+  padding-right: 12px;
+}
 .Categories-container{
   background-color: #F2F9FA;
   padding-left: 35px  ;
