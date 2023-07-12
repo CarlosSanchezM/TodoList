@@ -2,27 +2,36 @@
   --body-background-color: #e1e1fc;
   --main-background-color: white;
   --categories-container-background-color: #F2F9FA;
+  --text-normal-filter-color: invert(32%) sepia(15%) saturate(6%) hue-rotate(348deg) brightness(96%) contrast(85%);
+  --green-filter-color:invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
   --borders-color:rgb(240, 238, 238);
+  --text-normal-color:#585858;
+  --category-select-color:#f8a1a1;
+  --category-filter-select-color:invert(76%) sepia(12%) saturate(929%) hue-rotate(314deg) brightness(106%) contrast(96%);
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../TodoList/fonts/Lato-Bold.ttf');
 }
 
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
+  font-family: 'Lato', Arial;
 }
+
+
 
 body{
   padding: 50px 70px 50px 70px;
-  min-height: 100vh;
   background-color: var(--body-background-color);
 }
 
 main{
   display: grid;
   grid-template-columns: .8fr 2fr 1fr;
-  height: 100%;
-  /* background-color: white; */
+  min-height: 600px;
   border-radius: 8px;
 }
 
@@ -35,9 +44,18 @@ li{
   padding-bottom: 5px;
 }
 
-.Category-icon svg{
+.Category-icon img{
   padding-right: 12px;
+  filter: var(--text-normal-filter-color);
 }
+
+.Category-icon.Category-selected{
+  color: var(--category-select-color);
+}
+img.Category-selected{
+  filter: var(--category-filter-select-color);
+}
+
 .Categories-container{
   background-color: var(--categories-container-background-color);
   padding-left: 35px;
@@ -54,6 +72,7 @@ li{
 
 .Category-list{
   margin-bottom: 20px ;
+  color: var(--text-normal-color);
 }
 .Add-button-container{
   padding-bottom: 15px;
@@ -103,6 +122,7 @@ nav{
 }
 nav span{
   flex-grow: 1;
+  color: var(--text-normal-color);
 }
 .Nav-options{
   padding-left: 5px;
@@ -123,8 +143,14 @@ nav span{
 .Task-list{
   border-top: 2px solid var(--borders-color);
   padding-top: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
+.Add-task-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .container {
   display: flex;
   position: relative;
@@ -218,8 +244,7 @@ nav span{
 .Todo-item{
   display: flex;
   align-items: flex-start;
-  padding-left: 45px;
-  padding-right: 45px;
+  color: var(--text-normal-color);
 }
 
 .Task-name{
@@ -256,6 +281,7 @@ nav span{
 /*Meeting Styles*/
 
 .Meeting-container{
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,12 +290,15 @@ nav span{
   padding-bottom: 15px;
   border-left: 2px solid var(--borders-color);
   background-color: var(--main-background-color);
+  color: var(--text-normal-color);
 } 
 
+.Meet-title{
+  margin-top: 50px;
+}
 .Meeting-container div.Meet-card{
   height: 100px;
   width: 200px;
-  background-color: #0071e2;
   border-radius: 8px;
 }
 

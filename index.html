@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="style.css">
   <title>TODOList</title>
 </head>
@@ -22,61 +22,43 @@
         <section class="Category-container">
           <ul class="Category-list">
             <li>
-              <span class="Category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path d="M384 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H384zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                </svg>Family
+              <span class="Category-icon Category-selected">
+                <img class="Category-selected" src="/Icons/square.svg" alt="square">Family
               </span>
             </li>
             <li>
               <span class="Category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path d="M384 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H384zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                </svg>Vaccation Planning
+                <img src="/Icons/square.svg" alt="square">Vaccation Planning
               </span>
             </li>
             <li>
               <span class="Category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path d="M384 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H384zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                </svg>Buy a new car
+                <img src="/Icons/square.svg" alt="square">Buy a new car
               </span>
             </li>
             <li>
               <span class="Category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path d="M384 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H384zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                </svg>Festival Ideas
-              </span>
-            </li>
-          </ul>
-          <ul class="Category-list-2">
-            <li>
-              <span class="Category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path d="M384 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H384zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                </svg>Work
+                <img src="/Icons/square.svg" alt="square">Festival Ideas
               </span>
             </li>
             <li>
               <span class="Category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path d="M384 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H384zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                </svg>Onboarding Plan
+                <img src="/Icons/square.svg" alt="square">Work
               </span>
             </li>
             <li>
               <span class="Category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path d="M384 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H384zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                </svg>Invoice Review
+                <img src="/Icons/square.svg" alt="square">Onboarding Plan
               </span>
             </li>
             <li>
               <span class="Category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path d="M384 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H384zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-                </svg>Presentation Work
+                <img src="/Icons/square.svg" alt="square">Invoice Review
+              </span>
+            </li>
+            <li>
+              <span class="Category-icon">
+                <img src="/Icons/square.svg" alt="square">Presentation Work
               </span>  
             </li>
           </ul>
@@ -92,7 +74,7 @@
       <article class="Task-container">
         <section>
           <form>
-            <h1 class="Add-task"><input type="text" placeholder="Today Task" value=""></h1>
+            <div class="Add-task"><input type="text" placeholder="Today Task" value=""></div>
           </form>
           <nav class="Nav-bar">
             <span><span class="Nav-counter With-number">10</span><span class="Nav-options">All</span></span>
@@ -102,6 +84,7 @@
           </nav>
         </section>
         <section class="Task-list">
+          <div class="Add-task-container"><input type="text" placeholder="Add TODO" value=""></div>
           <div class="Todo-item">
             <label class="container">
               <input type="checkbox">
