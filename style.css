@@ -1,7 +1,8 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
 }
 
 body{
@@ -220,8 +221,25 @@ nav span{
   margin-left: 10px;
   background-color: rgb(189, 250, 189);
   border-radius: 8px;
-  padding: 2px 8px;
+  padding: 4px 6px;
+}
+
+.Task-status.First-status {
+  margin-left: 10px;
+  background-color: #e2dcf5;
+  color:#54409E;
+  border-radius: 8px;
+  padding: 4px 6px;
 } 
+
+.Task-status.Second-status {
+  margin-left: 10px;
+  background-color: rgb(189, 250, 189);
+  color: #2c991e;
+  border-radius: 8px;
+  padding: 4px 6px;
+} 
+
 
 .Meeting-container{
   display: flex;
