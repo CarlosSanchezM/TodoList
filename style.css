@@ -252,6 +252,7 @@ nav span{
   display: flex;
   align-items: flex-start;
   color: var(--text-normal-color);
+  margin-bottom: 5px;
 }
 
 .Task-name{
@@ -358,5 +359,7 @@ div.Meet-card.Fourth-meet{
   } */
   .Meeting-container{
     border-radius: 0 0 8px 8px;
+    min-height: 600px;
+    height: auto;
   }
 }
