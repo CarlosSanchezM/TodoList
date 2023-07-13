@@ -326,6 +326,11 @@ div.Meet-card.Fourth-meet{
 }
 
 @media screen and (max-width: 500px){
+  body{
+    padding: 20px 40px 20px 40px;
+    background-color: var(--body-background-color);
+  }
+  
   main{
     display: grid;
     grid-template-columns: 1fr;
