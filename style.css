@@ -62,9 +62,16 @@ img.Category-selected{
   border-radius: 8px 0 0 8px;
 }
 .Options-container{
-  padding-top: 20px;
+  padding-top: 43px;
   margin-bottom: 75px;
 }
+.Options-list span{
+  display: inline-block;
+  width: 20px;
+}
+/* .Option-icon{
+  margin-right: 10px;
+} */
 
 .Category-container{
   margin-bottom: 50px;
@@ -108,7 +115,7 @@ button {
   background-color: var(--main-background-color);
  }
 
-form{
+.Add-task-frm{
   padding-left: 45px;
   padding-right: 45px;
   font-size: 40px;
@@ -317,5 +324,13 @@ div.Meet-card.Third-meet{
 div.Meet-card.Fourth-meet{
   background-color: rgb(189, 250, 189);
 }
- 
+
+@media screen and (max-width: 500px){
+  main{
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 600px;
+    border-radius: 8px;
+  }
+}
  
