@@ -3,12 +3,14 @@
   --main-background-color: white;
   --categories-container-background-color: #F2F9FA;
   --text-normal-filter-color: invert(32%) sepia(15%) saturate(6%) hue-rotate(348deg) brightness(96%) contrast(85%);
-  --green-filter-color:invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+  --green-filter-color:invert(97%) sepia(99%) saturate(414%) hue-rotate(49deg) brightness(101%) contrast(96%);
   --borders-color:rgb(240, 238, 238);
   --text-normal-color:#585858;
-  --category-select-color:#f8a1a1;
-  --category-filter-select-color:invert(76%) sepia(12%) saturate(929%) hue-rotate(314deg) brightness(106%) contrast(96%);
+  --category-select-color:#2c991e;
+  --category-filter-select-color:invert(45%) sepia(89%) saturate(2818%) hue-rotate(82deg) brightness(93%) contrast(76%);
   --purple-color: #491af3;
+  --second-status-color: #2c991e;
+  --second--status-background--color: #BDFABD;
 }
 
 @font-face {
@@ -91,12 +93,16 @@ li{
 }
 
 .Category-icon-container{
+  padding-right: 12px;
   opacity: 0;
   transition: opacity 0.3s;
 }
-.Category-icon-container:hover{
+
+.Category-item:hover .Category-icon-container{
   opacity: 1;
 }
+
+
 .Add-button-container{
   padding-bottom: 15px;
 }
@@ -310,22 +316,24 @@ nav span span .Nav-options:hover::before {
   font-size: 16px;
 }
 .Task-status-container {
+  min-width: 100px;
   font-size: 12px;
   margin-left: auto;  
 }
 
 .Task-delete-icon{
+  margin-left: 10px; 
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-.Task-delete-icon:hover{
+.Todo-item:hover .Task-delete-icon{
   opacity: 1;
 }
 
 .Task-status {
   margin-left: 10px;
-  background-color: rgb(189, 250, 189);
+  background-color: var(--second--status-background--color);
   border-radius: 8px;
   padding: 4px 6px;
 }
@@ -340,8 +348,8 @@ nav span span .Nav-options:hover::before {
 
 .Task-status.Second-status {
   margin-left: 10px;
-  background-color: rgb(189, 250, 189);
-  color: #2c991e;
+  background-color: var(--second--status-background--color);
+  color: var(--second-status-color);
   border-radius: 8px;
   padding: 4px 6px;
 }
