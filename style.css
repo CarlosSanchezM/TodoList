@@ -528,7 +528,7 @@ div.Meet-card.Fourth-meet{
   background-color: var(--fourth-meet-card-background-color);
 }
 
-@media screen and (max-width: 500px){
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   body{
     padding: 20px 20px 20px 20px;
     background-color: var(--body-background-color);
@@ -576,6 +576,25 @@ div.Meet-card.Fourth-meet{
     height: auto;
   }
 }
+
+@media only screen and (min-device-width: 767px) and (max-device-width: 900px) {
+  body{
+    padding: 50px 0px 50px 0px;
+  }
+}
+
+@media only screen and (min-device-width: 1439px) and (max-device-width: 1919px) {
+  body{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 1920px) and (max-device-width: 2560px) {
+  body{
+    font-size: 24px;
+  }
+}
+
 
 .Dark-mode{
   --body-background-color: #222225;
