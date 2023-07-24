@@ -45,6 +45,7 @@
 body{
   padding: 50px 70px 50px 70px;
   background-color: var(--body-background-color);
+  font-size: 16px;
 }
 
 main{
@@ -139,7 +140,7 @@ button {
   border-radius: 0em 0.9em 0.9em 0.9em;
   padding: 0.8em 1.2em 0.8em 1em;
   transition: all ease-in-out 0.2s;
-  font-size: 16px;
+  font-size: 1em;
   cursor: pointer;
  }
  
@@ -165,7 +166,7 @@ button {
 .Add-task-frm{
   padding-left: 45px;
   padding-right: 45px;
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 nav{
@@ -219,7 +220,7 @@ nav span span .Nav-options:hover::before {
 .Nav-counter.With-number{
   background-color: var(--nav-counter-background-color);
   color: var(--nav-counter-color);
-  font-size: 14px; 
+  font-size: 0.88em; 
   padding: 2px 8px;
   border-radius: 8px;
 }
@@ -239,7 +240,7 @@ nav span span .Nav-options:hover::before {
 
 
 .Add-task input{
-  font-size: 18px;
+  font-size: 1.13rem;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -263,7 +264,7 @@ nav span span .Nav-options:hover::before {
   display: flex;
   position: relative;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 1.4em;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -359,11 +360,11 @@ nav span span .Nav-options:hover::before {
 
 .Task-name{
   padding-left: 10px;
-  font-size: 16px;
+  font-size: 1em;
 }
 .Task-status-container {
   min-width: 110px;
-  font-size: 12px;
+  font-size: 0.75em;
   margin-left: auto;  
 }
 
@@ -418,7 +419,7 @@ nav span span .Nav-options:hover::before {
 
 /* The switch - the box around the slider */
 .switch {
-  font-size: 17px;
+  font-size: 1.0625em;
   position: relative;
   display: inline-block;
   width: 3.5em;
@@ -540,7 +541,7 @@ div.Meet-card.Fourth-meet{
     border-radius: 8px;
   }
   .Categories-container{
-    font-size: 19px;
+    font-size: 19px;/*1.1875*/
     border-radius: 8px 8px 0 0;
   }
   .Category-text{
@@ -557,8 +558,17 @@ div.Meet-card.Fourth-meet{
   }
   /* .Task-container{
   } */
+  .Task-list{
+    padding-right: 0;
+  }
+  .Add-task-frm {
+    padding-right: 0;
+  }
+  nav{
+    display: none;
+  }
   .Task-status-container{
-    min-width: 100px;
+    min-width: 110px;
   }
   .Meeting-container{
     border-radius: 0 0 8px 8px;
