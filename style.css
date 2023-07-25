@@ -541,14 +541,14 @@ div.Meet-card.Fourth-meet{
     border-radius: 8px;
   }
   .Categories-container{
-    font-size: 19px;/*1.1875*/
+    font-size: 1.1875em;
     border-radius: 8px 8px 0 0;
   }
   .Category-text{
     margin-right: 2px;
   }
   .Options-container{
-    font-size: 19px
+    font-size: 1.1875em;
   }
   .Options-container img{
     transform: scale(1.3);
@@ -556,6 +556,25 @@ div.Meet-card.Fourth-meet{
   .Category-container img{
     transform: scale(1.3);
   }
+
+  /*AddButton Styles*/ 
+
+  .Add-button-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+
+  button {
+    position: fixed;
+   }
+   
+   button span {
+   }
+   
+   button:hover {
+   }
   /* .Task-container{
   } */
   .Task-list{
