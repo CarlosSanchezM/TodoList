@@ -581,6 +581,16 @@ div.Meet-card.Fourth-meet{
   body{
     padding: 50px 0px 50px 0px;
   }
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    border-radius: 8px;
+  }
+
+  .Meeting-container{
+    grid-column: 1 / span 2;
+  }
 }
 
 @media only screen and (min-device-width: 1439px) and (max-device-width: 1919px) {
