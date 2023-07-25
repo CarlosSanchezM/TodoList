@@ -597,11 +597,29 @@ div.Meet-card.Fourth-meet{
   body{
     font-size: 20px;
   }
+  .Add-task-frm {
+    font-size: 2.5em;
+  }
+  .Add-task input {
+    font-size: 2rem;
+  }
+  .Add-todo-frm input{
+    font-size: 1.8rem;
+  }
 }
 
 @media only screen and (min-device-width: 1920px) and (max-device-width: 2560px) {
   body{
     font-size: 24px;
+  }
+  .Add-task-frm {
+    font-size: 2.5em;
+  }
+  .Add-task input {
+    font-size: 2rem;
+  }
+  .Add-todo-frm input{
+    font-size: 1.8rem;
   }
 }
 
