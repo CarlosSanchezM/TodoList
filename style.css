@@ -47,6 +47,81 @@ body{
   background-color: var(--body-background-color);
   font-size: 16px;
 }
+/* The switch - the box around the slider */
+.toggle-container{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 2px #ccc;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-switch-handle {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  right: -35px;
+  font-size: .5em;
+  font-weight: bold;
+  color: #aaa;
+  text-shadow: 1px 1px #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch-handle {
+  transform: translateX(25px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 3px #000000;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch-background {
+  background-color: #000000;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch:before {
+  content: "On";
+  color: #000;
+  right: -15px;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch-background .toggle-switch-handle {
+  transform: translateX(20px);
+}
+
 
 main{
   display: grid;
@@ -64,6 +139,7 @@ ul{
 li{
   padding-bottom: 5px;
 } 
+
 
 .Options-container{
   padding-top: 43px;
@@ -107,12 +183,15 @@ li{
 .Category-text{
   padding-left: 8px;
 }
+
 .Category-icon-container {
   margin-left: auto;
 }
+
 .Category-selected{
   color: var(--category-select-color);
 }
+
 .Category-selected img{
   filter: var(--category-filter-select-color);
 }
@@ -241,11 +320,17 @@ nav span span .Nav-options:hover::before {
 
 .Add-task input{
   font-size: 1.13rem;
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 0.3s;
+  border: none;
+  outline: none; /* Elimina el contorno cuando el input está enfocado */
+  padding: 5px;
+  width: 100%;
 }
+
 .Add-task input:hover{
   opacity: 1;
+  border-bottom: 2px solid black; /* Estilo del borde inferior */
   cursor: pointer;
 }
 .Add-task-container{
@@ -253,12 +338,17 @@ nav span span .Nav-options:hover::before {
   margin-bottom: 20px;
 }
 .Add-task-container input{
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 0.3s;
+  border: none;
+  outline: none; /* Elimina el contorno cuando el input está enfocado */
+  padding: 5px;
+  width: 100%;
 }
 .Add-task-container input:hover{
   opacity: 1;
   cursor: pointer;
+  border-bottom: 2px solid black; /* Estilo del borde inferior */
 }
 .container {
   display: flex;
@@ -417,92 +507,6 @@ nav span span .Nav-options:hover::before {
   border-radius: 0 8px 8px 0;
 } 
 
-/* The switch - the box around the slider */
-.switch {
-  font-size: 1.0625em;
-  position: relative;
-  display: inline-block;
-  width: 3.5em;
-  height: 2em;
-  transform-style: preserve-3d;
-  perspective: 500px;
-  animation: toggle__animation 3s infinite;
-}
-
-.switch::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  filter: blur(20px);
-  z-index: -1;
-  border-radius: 50px;
-  background-color: #d8ff99;
-  background-image: radial-gradient(at 21% 46%, hsla(183,65%,60%,1) 0px, transparent 50%),
-radial-gradient(at 23% 25%, hsla(359,74%,70%,1) 0px, transparent 50%),
-radial-gradient(at 20% 1%, hsla(267,83%,75%,1) 0px, transparent 50%),
-radial-gradient(at 86% 87%, hsla(204,69%,68%,1) 0px, transparent 50%),
-radial-gradient(at 99% 41%, hsla(171,72%,77%,1) 0px, transparent 50%),
-radial-gradient(at 55% 24%, hsla(138,60%,62%,1) 0px, transparent 50%);
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fdfefedc;
-  transition: .4s;
-  border-radius: 30px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 1.4em;
-  left: 0.3em;
-  bottom: 0.35em;
-  transition: .4s;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -10px 10px 0px inset,
-     rgba(0, 0, 0, 0.09) 0px -1px 15px -8px;
-  background-color: #ff99fd;
-  background-image: radial-gradient(at 81% 39%, hsla(327,79%,79%,1) 0px, transparent 50%),
-  radial-gradient(at 11% 72%, hsla(264,64%,79%,1) 0px, transparent 50%),
-  radial-gradient(at 23% 20%, hsla(75,98%,71%,1) 0px, transparent 50%);
-}
-
-.input__check:checked + .slider {
-  background-color: #17202A;
-}
-
-.input__check:checked + .slider:before {
-  transform: translateX(1.5em);
-}
-
-@keyframes toggle__animation {
-  0%, 100% {
-    transform: translateY(-10px) rotateX(15deg) rotateY(-20deg);
-  }
-
-  50% {
-    transform: translateY(0px) rotateX(15deg) rotateY(-20deg);
-  }
-}
-
 .Meet-title{
   margin-top: 50px;
 }
@@ -540,19 +544,39 @@ div.Meet-card.Fourth-meet{
     min-height: 600px;
     border-radius: 8px;
   }
-  .Categories-container{
-    font-size: 1.1875em;
-    border-radius: 8px 8px 0 0;
-  }
-  .Category-text{
-    margin-right: 2px;
-  }
   .Options-container{
     font-size: 1.1875em;
   }
+
+  .Option-item{
+    max-width: 45px;
+  }
+
   .Options-container img{
     transform: scale(1.3);
   }
+
+  .Options-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .Categories-container{
+    font-size: 1.1875em;
+    border-radius: 8px 8px 0 0;
+    padding-left: 0;
+  }
+
+  .Category-text{
+    margin-right: 2px;
+  }
+
+  .Category-container{
+    padding-left: 35px;
+    display: none;
+  }
+
   .Category-container img{
     transform: scale(1.3);
   }
@@ -569,12 +593,6 @@ div.Meet-card.Fourth-meet{
   button {
     position: fixed;
    }
-   
-   button span {
-   }
-   
-   button:hover {
-   }
   /* .Task-container{
   } */
   .Task-list{
@@ -583,6 +601,16 @@ div.Meet-card.Fourth-meet{
   .Add-task-frm {
     padding-right: 0;
   }
+  .Add-task input{
+    padding-left: 0;
+    width: 72%;
+  }
+
+  .Add-task-container input{
+    padding-left: 0;
+    width: 72%;
+  }
+
   nav{
     display: none;
   }
