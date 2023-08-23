@@ -19,5 +19,8 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "firebase": "^10.1.0"
   }
 }

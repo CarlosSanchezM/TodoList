@@ -47,6 +47,16 @@ body{
   background-color: var(--body-background-color);
   font-size: 16px;
 }
+#googleLoginBtn{
+  background-color: #000000;
+  border-radius: 5px;
+  width: 50px;
+  height: 20px;
+  color: white;
+}
+#googleLoginBtn:hover{
+  cursor: pointer;
+}
 /* The switch - the box around the slider */
 .toggle-container{
   display: flex;
@@ -213,7 +223,7 @@ li{
 
 /*AddButton Styles*/ 
 
-button {
+.Add-button-container button {
   border: 2px solid var(--button-color);
   background-color: var(--button-color);
   border-radius: 0em 0.9em 0.9em 0.9em;
@@ -223,7 +233,7 @@ button {
   cursor: pointer;
  }
  
- button span {
+ .Add-button-container button span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,7 +241,7 @@ button {
   font-weight: 600;
  }
  
- button:hover {
+ .Add-button-container button:hover {
   background-color: var(--button-hover-color);
  }
 
@@ -604,7 +614,7 @@ div.Meet-card.Fourth-meet{
     padding-right: 10px;
   }
 
-  button {
+  .Add-button-container button {
     position: fixed;
    }
   /* .Task-container{
