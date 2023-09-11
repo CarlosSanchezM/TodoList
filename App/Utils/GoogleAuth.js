@@ -1,8 +1,27 @@
-import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import { signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth'
 import { firebaseAuth } from './Firebase'
+import { HideMainContent, ShowMainContent } from '../Components/Common/Login'
 
 const googleBtn = document.querySelector('#googleLoginBtn')
+const googleLogoutBtn = document.querySelector('#userImageContainer')
+// Variables for Login
+// const [
+//   mainContent,
+//   titleAppContainer,
+//   loginContainer,
+//   googleLoginBtnContainer
+// ] = [
+//   document.getElementById('MainContent'),
+//   ...document.getElementsByClassName('titleAppContainer'),
+//   ...document.getElementsByClassName('loginContainer'),
+//   ...document.getElementsByClassName('googleLoginBtnContainer')
+// ]
 
+// const displayNameContainer = document.getElementsByClassName(
+//   'displayNameContainer'
+// )
+// const userImageContainer = document.getElementsByClassName('userImageContainer')
+// const toggleContainer = document.getElementsByClassName('toggle-container')
 // signInWithPopup(firebaseAuth, googleProvider)
 //   .then((result) => {
 //     // This gives you a Google Access Token. You can use it to access the Google API.
@@ -30,11 +49,23 @@ googleBtn.addEventListener('click', async () => {
     // This gives you a Google Access Token. You can use it to access the Google API.
     // const credential = GoogleAuthProvider.credentialFromResult(userCredentials)
     const user = userCredentials.user
-    console.log('el user es:', user)
+    if (user) {
+      console.log(user)
+      ShowMainContent(user)
+    }
     // const token = credential.accessToken
     // console.log(token)
     // El usuario ha iniciado sesión exitosamente con Google
   } catch (error) {
     console.error('Error al iniciar sesión con Google:', error)
+  }
+})
+
+googleLogoutBtn.addEventListener('click', async () => {
+  try {
+    await signOut(firebaseAuth)
+    HideMainContent()
+  } catch (error) {
+    console.log(error)
   }
 })

@@ -12,225 +12,248 @@
   <title>TODOList</title>
 </head>
 <body>
-  <div id="googleLoginBtnContainer">
-    <button id="googleLoginBtn">Google</button>
-  </div>
-  <div class="toggle-container">
-    <label class="toggle-switch">
-      <input type="checkbox">
-      <div class="toggle-switch-background">
-        <div class="toggle-switch-handle"></div>
+  <div id="LoginWindow">
+    <!-- Auth -->
+    <div class="titleAppContainer">
+      <h1>TODOLIST APP</h1>
+    </div>
+    <!-- Auth -->
+    <div class="loginContainer">
+      <!-- Auth -->
+      <div class="googleLoginBtnContainer">
+        <img id="googleLoginBtn" src="/Icons/google.svg" alt="google">
+        <span>Sign In with Google</span>
+        <!-- <button id="googleLoginBtn">Google</button> -->
       </div>
-    </label>
-  </div>
-  <main>
-    <aside class="Categories-container">
-      <section class="Options-container">
-        <ul class="Options-list">
-          <li class="Option-item"><div class="Option-content"><span><img class="Option-icon" src="/Icons/box.svg" alt="box"></span>Inbox</div></li>
-          <li class="Option-item"><div class="Option-content"><span><img class="Option-icon" src="/Icons/star.svg" alt="start"></span>Today</div></li>
-          <li class="Option-item"><div class="Option-content"><span><img class="Option-icon" src="/Icons/trash.svg" alt="trash"></span>Trash</div></li>
-          <li class="Option-item Option-hide"><div class="Option-content"><span><img class="Option-icon" src="/Icons/list.svg" alt="list"></span>List</div></li>
-        </ul>
-      </section>
-      <section class="Category-container">
-        <ul class="Category-list">
-          <li class="Category-item Category-selected">
-              <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
-              <div class="Category-text">Family</div>
-              <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
-          </li>
-          <li class="Category-item">
-            <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
-            <div class="Category-text">Vaccation Planning</div>
-            <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
-          </li>
-          <li class="Category-item">
-            <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
-            <div class="Category-text">Buy a new car</div>
-            <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
-          </li>
-          <li class="Category-item">
-            <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
-            <div class="Category-text">Festival Ideas</div>
-            <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
-          </li>
-          <li class="Category-item">
-            <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
-            <div class="Category-text">Work</div>
-            <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
-          </li>
-          <li class="Category-item">
-            <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
-            <div class="Category-text">Onboarding Plan</div>
-            <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
-          </li>
-          <li class="Category-item">
-            <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
-            <div class="Category-text">Invoice Review</div>
-            <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
-          </li>
-          <li class="Category-item">
-            <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
-            <div class="Category-text">Presentation Work</div>
-            <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
-          </li>
-        </ul>
-      </section>
-      <div class="Add-button-container">
-        <button id="addButton">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
-          </span>
-        </button>
+      <!-- Auth -->
+      <div class="displayNameContainer">
+        <!-- <span>Roberto Carlos Sanchez Murguia</span> -->
       </div>
-    </aside>
-    <article class="Task-container">
-      <section>
-        <form class="Add-task-frm">
-          <div class="Add-task">
-            <input class="Add-task-input" type="text" placeholder="Today Task" name="tasksCollection">
+      <!-- Auth -->
+      <div id="userImageContainer" class="userImageContainer">
+        <!-- <img id="googleLogoutBtn" src="" alt="UserImage"> -->
+      </div>
+      <!-- Auth -->
+      <div class="toggle-container">
+        <label class="toggle-switch">
+          <input type="checkbox">
+          <div class="toggle-switch-background">
+            <div class="toggle-switch-handle"></div>
           </div>
-        </form>
-          <nav class="Nav-bar">
-            <span class="Nav-option-container">
-                <span>
-                  <span class="Nav-counter With-number">10</span>
-                  <span class="Nav-options">All</span>
-                </span> 
-            </span>
-            <span class="Nav-option-container Nav-selected">
-              <span>
-                <span class="Nav-counter"></span>
-                <span class="Nav-options">Done</span>
-              </span> 
-            </span>
-            <span class="Nav-option-container">
-              <span>
-                <span class="Nav-counter With-number">05</span>
-                <span class="Nav-options">In Progress</span>
-              </span>
-            </span>
-            <span class="Nav-option-container">
-              <span>
-                <span class="Nav-counter"></span>
-                <span class="Nav-options">Links</span>
-              </span>
-            </span>  
-          </nav>
-      </section>
-      <section class="Task-list">
-        <div class="Add-task-container">
-          <form class="Add-todo-frm">
-            <input class="Add-todo-input" type="text" placeholder="Add TODO" name="todo">
-          </form>
-        </div>
-        <div class="Todo-item">
-          <label class="container">
-            <input type="checkbox">
-            <div class="checkmark"></div>
-          </label>
-          <div class="Task-name">
-            Tarea 
-          </div>
-          <div class="Task-status-container">
-            <span class="Task-status First-status">Approved</span>
-            <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
-          </div>
-        </div>
-        <div class="Todo-item">
-          <label class="container">
-            <input checked="checked" type="checkbox">
-            <div class="checkmark"></div>
-          </label>
-          <div class="Task-name">
-            Tarea dsssssssss  wwewewew dsadadadsa dadadads eqwdq 
-          </div>
-          <div class="Task-status-container">
-            <span class="Task-status Second-status">In Progress</span>
-            <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
-          </div>
-        </div>
-        <div class="Todo-item">
-          <label class="container">
-            <input type="checkbox">
-            <div class="checkmark"></div>
-          </label>
-          <div class="Task-name">
-            Tarea 
-          </div>
-          <div class="Task-status-container">
-            <span class="Task-status First-status">Approved</span>
-            <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
-          </div>
-        </div>
-        <div class="Todo-item">
-          <label class="container">
-            <input type="checkbox">
-            <div class="checkmark"></div>
-          </label>
-          <div class="Task-name">
-            Tarea 
-          </div>
-          <div class="Task-status-container">
-            <span class="Task-status First-status">Approved</span>
-            <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
-          </div>
-        </div>
-        <div class="Todo-item">
-          <label class="container">
-            <input type="checkbox">
-            <div class="checkmark"></div>
-          </label>
-          <div class="Task-name">
-            Tarea 
-          </div>
-          <div class="Task-status-container">
-            <span class="Task-status First-status">Approved</span>
-            <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
-          </div>
-        </div>
-        <div class="Todo-item">
-          <label class="container">
-            <input checked="checked" type="checkbox">
-            <div class="checkmark"></div>
-          </label>
-          <div class="Task-name">
-            Tarea dsssssssss  wwewewew dsadadadsa dadadads eqwdq 
-          </div>
-          <div class="Task-status-container">
-            <span class="Task-status Second-status">In Progress</span>
-            <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
-          </div>
-        </div>
-        <div class="Todo-item">
-          <label class="container">
-            <input checked="checked" type="checkbox">
-            <div class="checkmark"></div>
-          </label>
-          <div class="Task-name">
-            Tarea dsssssssss  wwewewew dsadadadsa dadadads eqwdq 
-          </div>
-          <div class="Task-status-container">
-            <span class="Task-status Second-status">In Progress</span>
-            <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
-          </div>
-        </div>
-      </section>
-    </article>
-    <aside class="Meeting-container">
-      <!-- <div class="toggle-switch">
-        <label class="switch">
-          <input type="checkbox" class="input__check">
-          <span class="slider"></span>
         </label>
-      </div>    -->
-      <div class="Meet-title"><h2>Meetings Schedule</h2></div>
-      <div class="Meet-card First-meet">Card 1</div>
-      <div class="Meet-card Second-meet">Card 2</div>
-      <div class="Meet-card Third-meet">Card 3</div>
-      <div class="Meet-card Fourth-meet">Card 4</div>
-    </aside>
-  </main>
+      </div>
+    </div>
+  </div>
+  <div id="MainContent" class="hide">
+    <main>
+      <aside class="Categories-container">
+        <section class="Options-container">
+          <ul class="Options-list">
+            <li class="Option-item"><div class="Option-content"><span><img class="Option-icon" src="/Icons/box.svg" alt="box"></span>Inbox</div></li>
+            <li class="Option-item"><div class="Option-content"><span><img class="Option-icon" src="/Icons/star.svg" alt="start"></span>Today</div></li>
+            <li class="Option-item"><div class="Option-content"><span><img class="Option-icon" src="/Icons/trash.svg" alt="trash"></span>Trash</div></li>
+            <li class="Option-item Option-hide"><div class="Option-content"><span><img class="Option-icon" src="/Icons/list.svg" alt="list"></span>List</div></li>
+          </ul>
+        </section>
+        <section class="Category-container">
+          <ul class="Category-list">
+            <li class="Category-item Category-selected">
+                <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
+                <div class="Category-text">Family</div>
+                <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
+            </li>
+            <li class="Category-item">
+              <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
+              <div class="Category-text">Vaccation Planning</div>
+              <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
+            </li>
+            <li class="Category-item">
+              <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
+              <div class="Category-text">Buy a new car</div>
+              <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
+            </li>
+            <li class="Category-item">
+              <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
+              <div class="Category-text">Festival Ideas</div>
+              <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
+            </li>
+            <li class="Category-item">
+              <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
+              <div class="Category-text">Work</div>
+              <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
+            </li>
+            <li class="Category-item">
+              <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
+              <div class="Category-text">Onboarding Plan</div>
+              <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
+            </li>
+            <li class="Category-item">
+              <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
+              <div class="Category-text">Invoice Review</div>
+              <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
+            </li>
+            <li class="Category-item">
+              <div class="Category-square-container"><img src="/Icons/square.svg" alt="square"></div>
+              <div class="Category-text">Presentation Work</div>
+              <div class="Category-icon-container"><img class="Category-icon" src="/Icons/trash.svg" alt="trash"></div>
+            </li>
+          </ul>
+        </section>
+        <div class="Add-button-container">
+          <button id="addButton">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
+            </span>
+          </button>
+        </div>
+      </aside>
+      <article class="Task-container">
+        <section>
+          <form class="Add-task-frm">
+            <div class="Add-task">
+              <input class="Add-task-input" type="text" placeholder="Today Task" name="tasksCollection">
+            </div>
+          </form>
+            <nav class="Nav-bar">
+              <span class="Nav-option-container">
+                  <span>
+                    <span class="Nav-counter With-number">10</span>
+                    <span class="Nav-options">All</span>
+                  </span> 
+              </span>
+              <span class="Nav-option-container Nav-selected">
+                <span>
+                  <span class="Nav-counter"></span>
+                  <span class="Nav-options">Done</span>
+                </span> 
+              </span>
+              <span class="Nav-option-container">
+                <span>
+                  <span class="Nav-counter With-number">05</span>
+                  <span class="Nav-options">In Progress</span>
+                </span>
+              </span>
+              <span class="Nav-option-container">
+                <span>
+                  <span class="Nav-counter"></span>
+                  <span class="Nav-options">Links</span>
+                </span>
+              </span>  
+            </nav>
+        </section>
+        <section class="Task-list">
+          <div class="Add-task-container">
+            <form class="Add-todo-frm">
+              <input class="Add-todo-input" type="text" placeholder="Add TODO" name="todo">
+            </form>
+          </div>
+          <div class="Todo-item">
+            <label class="container">
+              <input type="checkbox">
+              <div class="checkmark"></div>
+            </label>
+            <div class="Task-name">
+              Tarea 
+            </div>
+            <div class="Task-status-container">
+              <span class="Task-status First-status">Approved</span>
+              <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
+            </div>
+          </div>
+          <div class="Todo-item">
+            <label class="container">
+              <input checked="checked" type="checkbox">
+              <div class="checkmark"></div>
+            </label>
+            <div class="Task-name">
+              Tarea dsssssssss  wwewewew dsadadadsa dadadads eqwdq 
+            </div>
+            <div class="Task-status-container">
+              <span class="Task-status Second-status">In Progress</span>
+              <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
+            </div>
+          </div>
+          <div class="Todo-item">
+            <label class="container">
+              <input type="checkbox">
+              <div class="checkmark"></div>
+            </label>
+            <div class="Task-name">
+              Tarea 
+            </div>
+            <div class="Task-status-container">
+              <span class="Task-status First-status">Approved</span>
+              <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
+            </div>
+          </div>
+          <div class="Todo-item">
+            <label class="container">
+              <input type="checkbox">
+              <div class="checkmark"></div>
+            </label>
+            <div class="Task-name">
+              Tarea 
+            </div>
+            <div class="Task-status-container">
+              <span class="Task-status First-status">Approved</span>
+              <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
+            </div>
+          </div>
+          <div class="Todo-item">
+            <label class="container">
+              <input type="checkbox">
+              <div class="checkmark"></div>
+            </label>
+            <div class="Task-name">
+              Tarea 
+            </div>
+            <div class="Task-status-container">
+              <span class="Task-status First-status">Approved</span>
+              <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
+            </div>
+          </div>
+          <div class="Todo-item">
+            <label class="container">
+              <input checked="checked" type="checkbox">
+              <div class="checkmark"></div>
+            </label>
+            <div class="Task-name">
+              Tarea dsssssssss  wwewewew dsadadadsa dadadads eqwdq 
+            </div>
+            <div class="Task-status-container">
+              <span class="Task-status Second-status">In Progress</span>
+              <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
+            </div>
+          </div>
+          <div class="Todo-item">
+            <label class="container">
+              <input checked="checked" type="checkbox">
+              <div class="checkmark"></div>
+            </label>
+            <div class="Task-name">
+              Tarea dsssssssss  wwewewew dsadadadsa dadadads eqwdq 
+            </div>
+            <div class="Task-status-container">
+              <span class="Task-status Second-status">In Progress</span>
+              <img class="Task-delete-icon" src="/Icons/trash.svg" alt="trash">
+            </div>
+          </div>
+        </section>
+      </article>
+      <aside class="Meeting-container">
+        <!-- <div class="toggle-switch">
+          <label class="switch">
+            <input type="checkbox" class="input__check">
+            <span class="slider"></span>
+          </label>
+        </div>    -->
+        <div class="Meet-title"><h2>Meetings Schedule</h2></div>
+        <div class="Meet-card First-meet">Card 1</div>
+        <div class="Meet-card Second-meet">Card 2</div>
+        <div class="Meet-card Third-meet">Card 3</div>
+        <div class="Meet-card Fourth-meet">Card 4</div>
+      </aside>
+    </main>
+  </div>
 </body>
 </html>

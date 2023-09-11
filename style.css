@@ -47,21 +47,114 @@ body{
   background-color: var(--body-background-color);
   font-size: 16px;
 }
-#googleLoginBtn{
-  background-color: #000000;
-  border-radius: 5px;
-  width: 50px;
-  height: 20px;
-  color: white;
+#LoginWindow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+#MainContent.hide{
+  display: none;
+}
+
+.titleAppContainer{
+  margin-bottom: 20px;
+}
+/* .loginContainer{
+  background-color: rgb(189, 250, 189);
+  border-radius: 10px;
+  border: 2px solid #000;
+  min-width: 90%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.loginContainer #googleLoginBtnContainer{
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3%;
+}
+.loginContainer .toggle-container{
+  align-self: baseline;
+  margin: 10px 5px 0 0;
+} */
+.displayNameContainer{
+  display: none;
+}
+.userImageContainer{
+  display: none;
+}
+/*Styles after authentication*/
+.loginContainer.Auth{
+ background-color: var(--body-background-color);
+ /* border: none; */
+ height: 60px;
+ width: 100%;
+}
+
+.titleAppContainer.Auth{
+ display: none;
+}
+
+.googleLoginBtnContainer.Auth{
+  display: none;
+}
+.displayNameContainer.Auth{
+  display: flex;
+  height: auto;
+  width: auto;
+}
+.userImageContainer.Auth{
+  display: flex;
+  height: 100%;
+  width: 20px;
+  margin-left: 2%;
+  margin-right: 16%;
+}
+.userImageContainer.Auth img{
+  border-radius: 50%;
+}
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 80vh; 
+  background-color: rgb(189, 250, 189);
+  border-radius: 10px;
+  border: 2px solid #000;
+  position: relative;
+}
+.loginContainer.Auth {
+  flex-direction: row;
+  justify-content: flex-end;
+  border: none;
+  margin-bottom: 8px;
+}
+
+.googleLoginBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
 #googleLoginBtn:hover{
   cursor: pointer;
 }
-/* The switch - the box around the slider */
-.toggle-container{
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+#googleLogoutBtn:hover{
+  cursor: pointer;
 }
 .toggle-switch {
   position: relative;
@@ -554,6 +647,9 @@ div.Meet-card.Fourth-meet{
     min-height: 600px;
     border-radius: 8px;
   }
+  .loginContainer{
+    width: 60vw;
+  }
   .Options-container{
     font-size: 1em;
   }
@@ -646,6 +742,20 @@ div.Meet-card.Fourth-meet{
     min-height: 600px;
     height: auto;
   }
+  .loginContainer.Auth{
+    margin-bottom: 5%;
+  }
+  .displayNameContainer.Auth {
+    /* width: 10px; */
+    margin-right: auto;
+  }
+  .userImageContainer.Auth{
+    margin-right: 10%;
+  }
+  .toggle-container.Auth{
+    display: flex;
+    position: relative;
+  }
 }
 
 @media only screen and (min-device-width: 767px) and (max-device-width: 900px) {
@@ -662,6 +772,13 @@ div.Meet-card.Fourth-meet{
   .Meeting-container{
     grid-column: 1 / span 2;
   }
+
+  .loginContainer{
+    width: 60vw;
+  }
+  .userImageContainer.Auth{
+    margin-right: 16%;
+  }
 }
 
 @media only screen and (min-device-width: 1439px) and (max-device-width: 1919px) {
@@ -677,6 +794,16 @@ div.Meet-card.Fourth-meet{
   .Add-todo-frm input{
     font-size: 1.8rem;
   }
+  .loginContainer {
+    width: 60vw;
+  }
+  #googleLoginBtn {
+    width: 100px; /* Nuevo ancho */
+    height: 100px; /* Nuevo alto */
+  }
+  .userImageContainer.Auth{
+    margin-right: 10%;
+  }
 }
 
 @media only screen and (min-device-width: 1920px) and (max-device-width: 2560px) {
@@ -691,6 +818,16 @@ div.Meet-card.Fourth-meet{
   }
   .Add-todo-frm input{
     font-size: 1.8rem;
+  }
+  .loginContainer {
+    width: 60vw;
+  }
+  #googleLoginBtn {
+    width: 100px; /* Nuevo ancho */
+    height: 100px; /* Nuevo alto */
+  }
+  .userImageContainer.Auth{
+    margin-right: 7%;
   }
 }
 
